@@ -25,6 +25,8 @@
         };
         file-picker = {
           hidden = false;
+          git-ignore = false;
+          git-global = true;
         };
         rulers = [
           80
@@ -64,7 +66,6 @@
     ignores = [
       "__pycache__/"
       ".git/"
-      "!*.md"
     ];
   };
 

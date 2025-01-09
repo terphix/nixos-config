@@ -1,6 +1,6 @@
 { userConfig, ... }:
 let
-  inherit (userConfig) hostName;
+  hostName = userConfig.hostname;
 in
 {
   networking = {

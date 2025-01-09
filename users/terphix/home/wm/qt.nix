@@ -1,4 +1,3 @@
-{ pkgs, ... }:
 {
   qt = {
     enable = true;

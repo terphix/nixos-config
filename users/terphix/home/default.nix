@@ -1,13 +1,17 @@
 { inputs }:
 { pkgs, userConfig, ... }:
 let
-  inherit (userConfig) user configDir;
+  inherit (userConfig) configPath;
+  username = userConfig.username;
+  homeDirectory = userConfig.homeDirectory;
 in
 {
   imports =
     [
       ./wm
+      ./gpg
       ./git
+      ./pass
       ./yazi
       ./btop
       ./brave
@@ -21,11 +25,10 @@ in
 
   # Configure home
   home = {
-    username = "${user}";
-    homeDirectory = "/home/${user}";
+    inherit username homeDirectory;
     stateVersion = "24.11";
     sessionVariables = {
-      config = "${configDir}";
+      config = configPath;
     };
     packages = with pkgs; [
       age

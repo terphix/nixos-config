@@ -1,22 +1,21 @@
 {
   wayland.windowManager.hyprland.settings = {
-    # Общие настройки для окон
+    # General settings
     general = {
-      # Отступы и обводка
+      # Gaps and border
       gaps_in = 3;
       gaps_out = 5;
       border_size = 3;
       no_border_on_floating = false;
 
-      # Цвета обводки
+      # Border colors
       "col.active_border" = "rgb(8caaee)";
       "col.inactive_border" = "rgb(303446)";
 
-      # Доп. опции
+      # Layout
       layout = "dwindle";
     };
 
-    # Прочее
     misc = {
       disable_hyprland_logo = true; # :(
       disable_splash_rendering = true;
@@ -32,15 +31,15 @@
       swallow_regex = "^(wezterm)$";
     };
 
-    # Декорации окон
+    # Windows decoration
     decoration = {
       rounding = 10;
 
-      # Прозрачность
+      # Opacity settings
       active_opacity = 1.0;
       inactive_opacity = 1.0;
 
-      # Размытие
+      # Blur
       blur = {
         size = 6;
         passes = 3;
@@ -49,7 +48,7 @@
         ignore_opacity = true;
       };
 
-      # Тени
+      # Shadows
       #drop_shadow = false;
       #shadow_ignore_window = true;
       #shadow_offset = "1 2";
@@ -61,7 +60,7 @@
       # blurls = "lockscreen";
     };
 
-    # Анимации окон
+    # Windows animations
     animations = {
       enabled = true;
       bezier = [

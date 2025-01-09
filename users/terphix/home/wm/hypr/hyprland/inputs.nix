@@ -1,6 +1,6 @@
 { userConfig, ... }:
 let
-  inherit (userConfig) screenshotsDir;
+  inherit (userConfig) screenshotsPath;
 in
 {
   wayland.windowManager.hyprland.settings = {
@@ -48,8 +48,8 @@ in
         ### Hardware ###
         ################
         # Screenshots
-        '', PRINT, exec, hyprshot -m "region" -o ${screenshotsDir}''
-        ''$mainMod, PRINT, exec, hyprshot -m "output" -o ${screenshotsDir}''
+        '', PRINT, exec, hyprshot -m "region" -o ${screenshotsPath}''
+        ''$mainMod, PRINT, exec, hyprshot -m "output" -o ${screenshotsPath}''
 
         # Sound
         ", XF86AudioMicMute, exec, pamixer --default-source -t"

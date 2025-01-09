@@ -1,14 +1,14 @@
 { pkgs, userConfig, ... }:
 let
-  inherit (userConfig) user userEmail;
+  userName = userConfig.username;
+  userEmail = userConfig.publicEmail;
 in
 {
   programs.git = {
     enable = true;
     package = pkgs.gitAndTools.gitFull;
     lfs.enable = true;
-    userName = "${user}";
-    userEmail = "${userEmail}";
+    inherit userName userEmail;
     aliases = {
       aa = "add --all";
       cm = "commit -m";

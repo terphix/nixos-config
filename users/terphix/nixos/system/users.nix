@@ -1,19 +1,32 @@
-{ config, ... }:
+{ config, userConfig, ... }:
+let
+  name = userConfig.username;
+  home = userConfig.homeDirectory;
+  hashedPasswordFile = config.sops.secrets."terphix/hashedPassword".path;
+in
 {
+  # Sops settings for user password
   sops.secrets."terphix/hashedPassword" = {
     neededForUsers = true;
-    owner = config.users.users.terphix.name;
+    owner = name;
   };
 
   users.users = {
     terphix = {
+      inherit name;
       isNormalUser = true;
-      description = "TerphiX";
+      description = "Terphix";
+
+      inherit home;
+      createHome = true;
+      homeMode = "700";
+
       extraGroups = [
         "networkmanager"
         "wheel"
       ];
-      hashedPasswordFile = config.sops.secrets."terphix/hashedPassword".path;
+
+      inherit hashedPasswordFile;
     };
   };
 }

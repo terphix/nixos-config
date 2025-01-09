@@ -56,8 +56,8 @@
     # Main laptop
     {
       nixosConfigurations.thinky = mkSystem "thinkbook-16-g6" {
-        user = "terphix";
-        hostName = "thinky";
+        username = "terphix";
+        hostname = "thinky";
         system = "x86_64-linux";
       };
     };

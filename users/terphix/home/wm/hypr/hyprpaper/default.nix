@@ -1,6 +1,6 @@
 { pkgs, userConfig, ... }:
 let
-  inherit (userConfig) wallpapersDir;
+  inherit (userConfig) wallpapersPath;
 in
 {
   services.hyprpaper = {
@@ -11,10 +11,10 @@ in
       splash = false;
       splash_offset = 2.0;
       preload = [
-        "${wallpapersDir}/Tokyo.png"
+        "${wallpapersPath}/Tokyo.png"
       ];
       wallpaper = [
-        ", ${wallpapersDir}/Tokyo.png"
+        ", ${wallpapersPath}/Tokyo.png"
       ];
     };
   };

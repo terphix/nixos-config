@@ -1,6 +1,6 @@
 { pkgs, userConfig, ... }:
 let
-  inherit (userConfig) wallpapersDir;
+  inherit (userConfig) wallpapersPath;
 in
 {
   programs.hyprlock = {
@@ -16,7 +16,7 @@ in
       };
       background = [
         {
-          path = "${wallpapersDir}/Lowpoly_Street.png";
+          path = "${wallpapersPath}/Lowpoly_Street.png";
         }
       ];
       input-field = [

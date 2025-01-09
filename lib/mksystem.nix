@@ -6,8 +6,8 @@
 
 machine:
 {
-  user,
-  hostName,
+  username,
+  hostname,
   system,
 }:
 let
@@ -16,14 +16,14 @@ let
   ######################
   # Standart
   machineConfig = ../machines/${machine};
-  systemConfig = ../users/${user}/nixos;
-  homeConfig = ../users/${user}/home;
+  systemConfig = ../users/${username}/nixos;
+  homeConfig = ../users/${username}/home;
 
   # Additional
-  userConfig = import ../users/${user}/config {
+  userConfig = import ../users/${username}/config {
     inherit
-      user
-      hostName
+      username
+      hostname
       system
       ;
   };
@@ -67,7 +67,7 @@ nixpkgs.lib.nixosSystem {
       sops = {
         defaultSopsFormat = "yaml";
         defaultSopsFile = ../secrets/secrets.yaml;
-        age.keyFile = "/home/${user}/.config/sops/age/keys.txt";
+        age.keyFile = "/home/${username}/.config/sops/age/keys.txt";
       };
     }
 
@@ -77,7 +77,7 @@ nixpkgs.lib.nixosSystem {
       home-manager.useGlobalPkgs = true;
       home-manager.useUserPackages = true;
       home-manager.extraSpecialArgs = { inherit userConfig; };
-      home-manager.users.${user} = import homeConfig { inherit inputs; };
+      home-manager.users.${username} = import homeConfig { inherit inputs; };
     }
   ];
 }
