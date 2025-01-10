@@ -8,6 +8,9 @@
     "center, class:^(kitty)$, title:^(kitty)$"
     "move 72% 7%, title:^(Picture in picture)$"
 
+    # Workspace
+    "workspace 10 silent, class:^([Nn]ekoray)$"
+
     # Resize
     "size 75% 75%, class:^(kitty)$, title:^(kitty)$"
     "size 100% 100% title:^(Picture in picture)$"

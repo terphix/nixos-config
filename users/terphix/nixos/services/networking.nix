@@ -6,5 +6,6 @@ in
   networking = {
     inherit hostName;
     networkmanager.enable = true;
+    firewall.checkReversePath = false;
   };
 }

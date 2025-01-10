@@ -10,6 +10,8 @@
 
     exec-once = [
       "hyprctl setcursor 28"
+      "systemctl --user start hyprpolkitagent"
+      "nekoray"
     ];
   };
 }

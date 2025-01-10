@@ -66,6 +66,7 @@
     ignores = [
       "__pycache__/"
       ".git/"
+      ".ruff_cache/"
     ];
   };
 

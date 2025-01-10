@@ -18,6 +18,7 @@ in
       ./langs
       ./kitty
       ./helix
+      ./nekoray
     ]
     ++ [
       inputs.catppuccin.homeManagerModules.catppuccin
