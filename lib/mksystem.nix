@@ -48,7 +48,7 @@ let
 in
 nixpkgs.lib.nixosSystem {
   inherit system;
-  specialArgs = { inherit userConfig; };
+  specialArgs = { inherit userConfig inputs; };
 
   modules = [
     # System modules
@@ -76,8 +76,8 @@ nixpkgs.lib.nixosSystem {
     {
       home-manager.useGlobalPkgs = true;
       home-manager.useUserPackages = true;
-      home-manager.extraSpecialArgs = { inherit userConfig; };
-      home-manager.users.${username} = import homeConfig { inherit inputs; };
+      home-manager.extraSpecialArgs = { inherit userConfig inputs; };
+      home-manager.users.${username} = import homeConfig;
     }
   ];
 }

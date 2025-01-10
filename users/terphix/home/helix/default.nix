@@ -1,8 +1,16 @@
-{ pkgs, ... }:
+{
+  inputs,
+  userConfig,
+  pkgs,
+  ...
+}:
+let
+  helixPackages = inputs.helix.packages.${userConfig.system};
+in
 {
   programs.helix = {
     enable = true;
-    package = pkgs.helix;
+    package = helixPackages.helix;
     defaultEditor = true;
     settings = {
       editor = {

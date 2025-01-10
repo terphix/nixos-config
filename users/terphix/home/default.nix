@@ -1,5 +1,9 @@
-{ inputs }:
-{ pkgs, userConfig, ... }:
+{
+  inputs,
+  pkgs,
+  userConfig,
+  ...
+}:
 let
   inherit (userConfig) configPath;
   username = userConfig.username;

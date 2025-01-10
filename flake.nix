@@ -27,6 +27,20 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    ################
+    ### Hyprland ###
+    ################
+    hyprland = {
+      url = "github:hyprwm/Hyprland";
+    };
+
+    ####################
+    ### Helix Editor ###
+    ####################
+    helix = {
+      url = "github:helix-editor/helix";
+    };
+
     ##################
     ### Catppuccin ###
     ##################
