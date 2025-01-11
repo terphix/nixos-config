@@ -10,8 +10,6 @@
 
 - [ ] Separate Fish from Kitty.
 
-- [ ] Use UWSM Hyprland.
-
 - [ ] Fix Picture-in-Picture on Brave.
 
 - [ ] Fix Hyprpolkitagent.

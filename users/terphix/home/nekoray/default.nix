@@ -2,6 +2,6 @@
 {
   home.packages = with pkgs; [
     nekoray
-    master.hyprpolkitagent
+    polkit-kde-agent
   ];
 }
