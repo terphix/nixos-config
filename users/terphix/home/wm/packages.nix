@@ -1,8 +1,7 @@
 { pkgs, ... }:
 {
   home.packages = with pkgs; [
-    hyprpicker
-    hyprshot
+    pamixer
     wl-clipboard
     brightnessctl
   ];

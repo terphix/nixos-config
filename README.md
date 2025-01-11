@@ -2,22 +2,45 @@
 - System and home-manager configurations using flakes, sops-nix and other cool stuf.
 
 
-### Task list
 
-- [X] Function for importing files from subdirectories.
+# Task list
 
-- [ ] Sorting the home folder.
+### New things
 
-- [ ] Separate Fish from Kitty.
+- [X] Sorting the home folder.
 
-- [ ] Fix Picture-in-Picture on Brave.
+- [X] Separate Fish and Starship from Kitty.
 
-- [x] Fix Hyprpolkitagent.
+- [ ] Try NixCord.
+
+- [ ] Replace sudo.
+
+- [X] More windowrulev2.
+
+- [ ] Add script for config.
+
+- [ ] Configure SSH-agent.
+
+### Need to fix
+
+- [X] Fix Picture-in-Picture on Brave.
+
+- [ ] Fix polkit UI.
+
+### Config arch
 
 - [ ] Make proper import of overlays into a variable.
 
 - [ ] Make proper import of custom lib into a variable.
 
+- [ ] Create beautifull README.md
 
-### That's all.
+- [ ] Add sops decrypt support to .gitatributes.
+
+- [X] Add more modules for home apps.
+
+- [ ] Path file for user config.
+
+
+# That's all.
 - Thank you for watching!

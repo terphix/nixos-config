@@ -1,6 +1,6 @@
 { userConfig, ... }:
 let
-  inherit (userConfig) screenshotsPath;
+  inherit (userConfig) screenshotsPath configPath;
 in
 {
   wayland.windowManager.hyprland.settings = {
@@ -37,13 +37,17 @@ in
         ############
         # Standart
         "$mainMod, A, exec, $MENU"
-        "$mainMod, E, exec, $FILES"
+        "$mainMod, E, exec, $FILE_BROWSER"
         "$mainMod, Escape, exec, $TOP"
+
+        # Develop
         "$mainMod, RETURN, exec, $TERM"
+        "$mainMod, C, exec, $CODE_EDITOR"
+        "$mainMod SHIFT, C, exec, $CODE_EDITOR ${configPath}"
 
         # Webs
         "$mainMod, B, exec, $BROWSER"
-        "$mainMod, Y, exec, $YOUTUBE"
+        "$mainMod, Y, exec, $YOUTUBE_CLIENT"
 
         ################
         ### Hardware ###
@@ -68,7 +72,7 @@ in
         "$mainMod SHIFT CTRL, Escape, exit"
 
         # Pick color
-        "$mainMod, P, exec, hyprpicker -a"
+        "$mainMod SHIFT, P, exec, hyprpicker -a"
 
         # Lock screen
         "$mainMod, L, exec, hyprlock -q"
@@ -79,7 +83,7 @@ in
         # Change window mode
         "$mainMod, Q, killactive"
         "$mainMod SHIFT, F, fullscreen"
-        "$mainMod SHIFT, P, pin"
+        "$mainMod, P, pin"
         "$mainMod, F, togglefloating"
         "$mainMod, J, togglesplit"
 

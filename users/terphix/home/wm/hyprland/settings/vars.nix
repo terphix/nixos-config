@@ -4,10 +4,13 @@
     "$TERM" = "kitty";
 
     "$MENU" = "rofi -show drun";
-    "$TOP" = "$TERM btop";
-    "$FILES" = "kitty yazi";
+    "$TOP" = "kitty --title btop btop";
+    "$FILE_BROWSER" = "kitty --title yazi yazi";
+
+    "$CODE_EDITOR" = "kitty --title helix hx";
+
     "$BROWSER" = "brave";
-    "$YOUTUBE" = "freetube";
+    "$YOUTUBE_CLIENT" = "freetube";
 
     exec-once = [
       "hyprctl setcursor 28"
