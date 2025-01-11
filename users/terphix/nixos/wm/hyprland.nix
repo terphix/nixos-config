@@ -1,4 +1,8 @@
-{ inputs, userConfig, ... }:
+{
+  inputs,
+  userConfig,
+  ...
+}:
 let
   hyprlandPackages = inputs.hyprland.packages.${userConfig.system};
 in

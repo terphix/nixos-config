@@ -1,4 +1,8 @@
-{ pkgs, userConfig, ... }:
+{
+  pkgs,
+  userConfig,
+  ...
+}:
 let
   homedir = userConfig.gpgPath;
 in

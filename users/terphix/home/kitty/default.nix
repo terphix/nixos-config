@@ -1,9 +1,11 @@
-{ pkgs, ... }:
 {
-  imports = [
-    ./shells
-    ./starship
-  ];
+  pkgs,
+  customLib,
+  ...
+}:
+{
+  imports = (customLib.scanPaths ./.);
+
   programs.kitty = {
     enable = true;
     package = pkgs.kitty;

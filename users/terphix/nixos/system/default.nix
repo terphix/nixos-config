@@ -1,9 +1,4 @@
+{ customLib, ... }:
 {
-  imports = [
-    ./env.nix
-    ./nix.nix
-    ./boot.nix
-    ./users.nix
-    ./locale.nix
-  ];
+  imports = (customLib.scanPaths ./.);
 }

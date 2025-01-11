@@ -1,4 +1,8 @@
-{ config, userConfig, ... }:
+{
+  config,
+  userConfig,
+  ...
+}:
 let
   name = userConfig.username;
   home = userConfig.homeDirectory;

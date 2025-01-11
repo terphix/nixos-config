@@ -1,7 +1,4 @@
+{ customLib, ... }:
 {
-  imports = [
-    ./hyprland
-    ./hyprlock
-    ./hyprpaper
-  ];
+  imports = (customLib.scanPaths ./.);
 }

@@ -1,4 +1,8 @@
-{ pkgs, userConfig, ... }:
+{
+  pkgs,
+  userConfig,
+  ...
+}:
 let
   inherit (userConfig) wallpapersPath;
 in

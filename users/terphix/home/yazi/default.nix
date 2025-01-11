@@ -2,7 +2,7 @@
 {
   programs.yazi = {
     enable = true;
-    package = pkgs.unstable.yazi;
+    package = pkgs.yazi;
     enableFishIntegration = true;
     settings = {
       log.enable = false;

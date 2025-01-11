@@ -1,7 +1,4 @@
+{ customLib, ... }:
 {
-  imports = [
-    ./pam.nix
-    ./xserver.nix
-    ./networking.nix
-  ];
+  imports = (customLib.scanPaths ./.);
 }

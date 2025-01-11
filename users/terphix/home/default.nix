@@ -1,6 +1,7 @@
 {
-  inputs,
   pkgs,
+  inputs,
+  customLib,
   userConfig,
   ...
 }:
@@ -10,23 +11,9 @@ let
   homeDirectory = userConfig.homeDirectory;
 in
 {
-  imports =
-    [
-      ./wm
-      ./gpg
-      ./git
-      ./pass
-      ./yazi
-      ./btop
-      ./brave
-      ./langs
-      ./kitty
-      ./helix
-      ./nekoray
-    ]
-    ++ [
-      inputs.catppuccin.homeManagerModules.catppuccin
-    ];
+  imports = (customLib.scanPaths ./.) ++ [
+    inputs.catppuccin.homeManagerModules.catppuccin
+  ];
 
   # Configure home
   home = {

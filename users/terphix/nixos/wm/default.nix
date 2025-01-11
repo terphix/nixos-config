@@ -1,6 +1,4 @@
+{ customLib, ... }:
 {
-  imports = [
-    ./sddm.nix
-    ./hyprland.nix
-  ];
+  imports = (customLib.scanPaths ./.);
 }

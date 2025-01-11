@@ -1,10 +1,6 @@
+{ customLib, ... }:
 {
-  imports = [
-    ./inputs.nix
-    ./rules.nix
-    ./vars.nix
-    ./view.nix
-  ];
+  imports = (customLib.scanPaths ./.);
 
   wayland.windowManager.hyprland = {
     enable = true;

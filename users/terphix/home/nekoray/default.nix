@@ -2,6 +2,6 @@
 {
   home.packages = with pkgs; [
     nekoray
-    hyprpolkitagent
+    master.hyprpolkitagent
   ];
 }

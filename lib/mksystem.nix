@@ -1,14 +1,16 @@
 {
+  lib,
   inputs,
   nixpkgs,
-  nixpkgs-unstable,
+  nixpkgs-stable,
+  nixpkgs-master,
 }:
 
 machine:
 {
+  system,
   username,
   hostname,
-  system,
 }:
 let
   ######################
@@ -28,6 +30,11 @@ let
       ;
   };
 
+  ########################
+  ### Custom functions ###
+  ########################
+  customLib = import ../lib/scanpaths.nix { inherit lib; };
+
   #################
   #### Packages ###
   #################
@@ -37,18 +44,22 @@ let
   packagesConfig = packages.config;
 
   # Overlays
-  # FIXME: Make import list of overlays
   overlays = import ../overlays {
     inherit
-      nixpkgs-unstable
+      nixpkgs-stable
+      nixpkgs-master
       system
       packagesConfig
       ;
   };
+
+  ####################
+  ### Special args ###
+  ####################
+  specialArgs = { inherit inputs customLib userConfig; };
 in
 nixpkgs.lib.nixosSystem {
-  inherit system;
-  specialArgs = { inherit userConfig inputs; };
+  inherit system specialArgs;
 
   modules = [
     # System modules
@@ -57,7 +68,10 @@ nixpkgs.lib.nixosSystem {
     {
       nixpkgs = {
         config = packagesConfig;
-        overlays = [ overlays.unstable-packages ];
+        overlays = [
+          overlays.stable-packages
+          overlays.master-packages
+        ];
       };
     }
 
@@ -76,7 +90,7 @@ nixpkgs.lib.nixosSystem {
     {
       home-manager.useGlobalPkgs = true;
       home-manager.useUserPackages = true;
-      home-manager.extraSpecialArgs = { inherit userConfig inputs; };
+      home-manager.extraSpecialArgs = specialArgs;
       home-manager.users.${username} = import homeConfig;
     }
   ];

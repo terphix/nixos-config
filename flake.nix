@@ -5,18 +5,28 @@
     ###############################
     ### Official NixOS packages ###
     ###############################
-    # Stable packages
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
+    # Primary unstable nixpkgs repository
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
-    # Unstable packages
-    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+    # Stable nixpkgs repository
+    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-24.11";
+
+    # Master nixpkgs repository
+    nixpkgs-master.url = "github:nixos/nixpkgs";
 
     ####################
     ### Home Manager ###
     ####################
     home-manager = {
-      url = "github:nix-community/home-manager/release-24.11";
+      url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    ################
+    ### Hardware ###
+    ################
+    nixos-hardware = {
+      url = "github:nixos/nixos-hardware";
     };
 
     ################
@@ -52,15 +62,20 @@
   outputs =
     {
       nixpkgs,
-      nixpkgs-unstable,
+      nixpkgs-stable,
+      nixpkgs-master,
       ...
     }@inputs:
     let
+      inherit (nixpkgs) lib;
+
       mkSystem = import ./lib/mksystem.nix {
         inherit
+          lib
           inputs
           nixpkgs
-          nixpkgs-unstable
+          nixpkgs-stable
+          nixpkgs-master
           ;
       };
     in
@@ -70,9 +85,9 @@
     # Main laptop
     {
       nixosConfigurations.thinky = mkSystem "thinkbook-16-g6" {
+        system = "x86_64-linux";
         username = "terphix";
         hostname = "thinky";
-        system = "x86_64-linux";
       };
     };
 }

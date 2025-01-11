@@ -1,14 +1,13 @@
 {
-  inputs,
-  userConfig,
   pkgs,
+  inputs,
   ...
 }:
-let
-  # Unstable packages to sinc with Hyprland
-  unstable = inputs.hyprland.inputs.nixpkgs.legacyPackages.${userConfig.system};
-in
 {
+  imports = [
+    inputs.nixos-hardware.nixosModules.common-cpu-intel
+  ];
+
   services.thermald = {
     enable = true;
     package = pkgs.thermald;
@@ -16,14 +15,6 @@ in
 
   hardware.graphics = {
     enable = true;
-    package = unstable.mesa.drivers;
-
-    extraPackages = with pkgs; [
-      vpl-gpu-rt
-    ];
-
-    # For 32-bit
     enable32Bit = true;
-    package32 = unstable.pkgsi686Linux.mesa.drivers;
   };
 }

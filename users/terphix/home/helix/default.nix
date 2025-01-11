@@ -1,7 +1,7 @@
 {
+  pkgs,
   inputs,
   userConfig,
-  pkgs,
   ...
 }:
 let
@@ -42,6 +42,7 @@ in
       };
       keys.normal = {
         space.space = "file_picker";
+        space.f = "global_search";
         space.w = ":w";
         space.q = ":q";
       };

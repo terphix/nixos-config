@@ -1,6 +1,4 @@
+{ customLib, ... }:
 {
-  imports = [
-    ./fish
-    ./bash
-  ];
+  imports = (customLib.scanPaths ./.);
 }

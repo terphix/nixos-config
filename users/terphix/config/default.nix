@@ -1,7 +1,7 @@
 {
+  system,
   username,
   hostname,
-  system,
 }:
 let
   homeDirectory = "/home/${username}";

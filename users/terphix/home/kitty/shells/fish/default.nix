@@ -1,10 +1,10 @@
-{ pkgs, ... }:
 {
-  imports = [
-    ./aliases.nix
-    ./functions.nix
-    ./plugins.nix
-  ];
+  pkgs,
+  customLib,
+  ...
+}:
+{
+  imports = (customLib.scanPaths ./.);
 
   programs.fish = {
     enable = true;

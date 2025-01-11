@@ -1,5 +1,4 @@
+{ customLib, ... }:
 {
-  imports = [
-    ./rust
-  ];
+  imports = (customLib.scanPaths ./.);
 }
