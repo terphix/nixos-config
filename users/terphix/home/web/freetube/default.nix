@@ -47,6 +47,7 @@ in
       # Video settings
       allowDashAv1Formats = true;
       proxyVideos = false;
+      useRssFeeds = true;
 
       autoplayPlaylists = false;
       autoplayVideos = false;
