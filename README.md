@@ -4,7 +4,7 @@
 
 ### Task list
 
-- [x] Function for importing files from subdirectories.
+- [X] Function for importing files from subdirectories.
 
 - [ ] Sorting the home folder.
 
@@ -12,7 +12,7 @@
 
 - [ ] Fix Picture-in-Picture on Brave.
 
-- [ ] Fix Hyprpolkitagent.
+- [x] Fix Hyprpolkitagent.
 
 - [ ] Make proper import of overlays into a variable.
 
