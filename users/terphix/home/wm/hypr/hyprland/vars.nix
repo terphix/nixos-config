@@ -7,6 +7,7 @@
     "$TOP" = "$TERM btop";
     "$FILES" = "kitty yazi";
     "$BROWSER" = "brave";
+    "$YOUTUBE" = "freetube";
 
     exec-once = [
       "hyprctl setcursor 28"

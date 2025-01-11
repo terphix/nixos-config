@@ -18,6 +18,12 @@
             block = true;
           }
         ];
+        play = [
+          {
+            run = ''mpv --fs "$@"'';
+            block = true;
+          }
+        ];
       };
     };
   };

@@ -20,6 +20,7 @@ in
   # Paths
   configPath = "${homeDirectory}/projects/nixos-config";
   wallpapersPath = "${homeDirectory}/pictures/wallpapers";
+  downloadsPath = "${homeDirectory}/downloads";
   screenshotsPath = "${homeDirectory}/pictures/screenshots";
 
   gpgPath = "${homeDirectory}/.gpg";
