@@ -1,17 +1,22 @@
-{ userConfig, ... }:
+{
+  pkgs,
+  userConfig,
+  ...
+}:
 let
   inherit (userConfig) username;
 in
 {
   security = {
     sudo.enable = false;
-    doas = {
+    sudo-rs = {
       enable = true;
+      package = pkgs.sudo-rs;
+      wheelNeedsPassword = true;
       extraRules = [
         {
           users = [ username ];
-          keepEnv = true;
-          persist = true;
+          commands = [ "ALL" ];
         }
       ];
     };

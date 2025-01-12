@@ -13,7 +13,7 @@
 
 - [ ] Try NixCord.
 
-- [ ] Replace sudo.
+- [X] Replace sudo.
 
 - [X] More windowrulev2.
 
