@@ -8,11 +8,10 @@ let
 in
 {
   security = {
-    sudo.enable = false;
     sudo-rs = {
       enable = true;
       package = pkgs.sudo-rs;
-      wheelNeedsPassword = true;
+      execWheelOnly = false;
       extraRules = [
         {
           users = [ username ];

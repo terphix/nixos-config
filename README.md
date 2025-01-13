@@ -7,23 +7,15 @@
 
 ### New things
 
-- [X] Sorting the home folder.
-
-- [X] Separate Fish and Starship from Kitty.
-
 - [ ] Try NixCord.
 
-- [X] Replace sudo.
-
-- [X] More windowrulev2.
+- [ ] Add Notify
 
 - [ ] Add script for config.
 
 - [ ] Configure SSH-agent.
 
 ### Need to fix
-
-- [X] Fix Picture-in-Picture on Brave.
 
 - [ ] Fix polkit UI.
 
@@ -36,8 +28,6 @@
 - [ ] Create beautifull README.md
 
 - [ ] Add sops decrypt support to .gitatributes.
-
-- [X] Add more modules for home apps.
 
 - [ ] Path file for user config.
 
