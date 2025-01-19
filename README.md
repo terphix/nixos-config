@@ -7,7 +7,7 @@
 
 ### New things
 
-- [ ] Try NixCord.
+- [x] Try NixCord.
 
 - [ ] Add Notify
 

@@ -51,6 +51,13 @@
       url = "github:helix-editor/helix";
     };
 
+    ###############
+    ### NixCord ###
+    ###############
+    nixcord = {
+      url = "github:kaylorben/nixcord";
+    };
+
     ##################
     ### Catppuccin ###
     ##################

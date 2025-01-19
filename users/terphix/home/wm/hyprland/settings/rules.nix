@@ -18,9 +18,11 @@
     #################
     ### Workspace ###
     #################
-    "workspace 2, class:^(brave-browser)$"
-    "workspace 3, class:^(kitty)$, title:^(helix)$"
-    "workspace 4, class:^(kitty)$, title:^(yazi)$"
+    "workspace 4, class:^(brave-browser)$"
+    "workspace 4, class:^(FreeTube)$"
+    "workspace 5, class:^(kitty)$, title:^(helix)$"
+    "workspace 6, class:^(kitty)$, title:^(yazi)$"
+    "workspace 9, class:^(discord)$"
 
     "workspace 10 silent, class:^([Nn]ekoray)$"
 
@@ -39,6 +41,6 @@
     #############
     ### Extra ###
     #############
-    "keepaspectratio, title:^(Picture in picture)"
+    "keepaspectratio, title:^(Picture in picture)$"
   ];
 }

@@ -48,6 +48,7 @@ in
         # Webs
         "$mainMod, B, exec, $BROWSER"
         "$mainMod, Y, exec, $YOUTUBE_CLIENT"
+        "$mainMod, D, exec, discord"
 
         ################
         ### Hardware ###

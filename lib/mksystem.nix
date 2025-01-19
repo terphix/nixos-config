@@ -38,7 +38,7 @@ let
   #################
   #### Packages ###
   #################
-  packages = import ../packages { };
+  packages = import ../packages { inherit lib; };
 
   # Config
   packagesConfig = packages.config;
