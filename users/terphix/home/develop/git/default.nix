@@ -19,7 +19,7 @@ in
       ch = "checkout";
       br = "branch";
       s = "status";
-      uncommit = "reset --soft head^";
+      uncommit = "reset --soft HEAD^";
       unadd = "reset";
     };
     extraConfig = {
