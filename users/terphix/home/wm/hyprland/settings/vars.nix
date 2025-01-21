@@ -15,7 +15,9 @@
     exec-once = [
       "hyprctl setcursor 28"
       "systemctl --user start plasma-polkit-agent.service"
+      "$BROWSER"
       "nekoray"
+      "[workspace special:magic silent] $TERM"
     ];
   };
 }

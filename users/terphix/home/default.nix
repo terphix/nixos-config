@@ -23,11 +23,10 @@ in
       config = configPath;
     };
     packages = with pkgs; [
-      age
+      zip
       lsd
-      sops
+      unzip
       fastfetch
-      efibootmgr
     ];
   };
 }

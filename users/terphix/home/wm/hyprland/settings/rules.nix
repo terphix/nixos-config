@@ -18,11 +18,12 @@
     #################
     ### Workspace ###
     #################
-    "workspace 4, class:^(brave-browser)$"
-    "workspace 4, class:^(FreeTube)$"
-    "workspace 5, class:^(kitty)$, title:^(helix)$"
-    "workspace 6, class:^(kitty)$, title:^(yazi)$"
+    "workspace 1, class:^(brave-browser)$"
+    "workspace 2, class:^(kitty)$, title:^(helix)$"
+    "workspace 3, class:^(kitty)$, title:^(yazi)$"
+    "workspace 8, class:^(FreeTube)$"
     "workspace 9, class:^(discord)$"
+    "workspace 9, class:^(com.ayugram.desktop)$"
 
     "workspace 10 silent, class:^([Nn]ekoray)$"
 
