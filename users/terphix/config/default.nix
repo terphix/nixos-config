@@ -18,7 +18,7 @@ in
   publicEmail = "terphix.code@yahoo.com";
 
   # Paths
-  configPath = "${homeDirectory}/projects/nixos-config";
+  configPath = "${homeDirectory}/projects/personal/nixos-config";
   wallpapersPath = "${homeDirectory}/pictures/wallpapers";
   downloadsPath = "${homeDirectory}/downloads";
   screenshotsPath = "${homeDirectory}/pictures/screenshots";
