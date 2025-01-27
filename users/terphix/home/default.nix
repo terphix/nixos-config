@@ -24,6 +24,7 @@ in
     };
     packages = with pkgs; [
       zip
+      nvd
       lsd
       unzip
       fastfetch

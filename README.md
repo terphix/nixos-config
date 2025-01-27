@@ -15,6 +15,8 @@
 
 - [ ] Configure SSH-agent.
 
+- [ ] Flash automount.
+
 ### Need to fix
 
 - [ ] Fix polkit UI.
