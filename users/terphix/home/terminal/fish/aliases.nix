@@ -6,7 +6,7 @@ in
   programs.fish.shellAliases = {
     shell = "nix-shell --command fish ./Shell";
     rb = "sudo nixos-rebuild switch --flake ${configPath}";
-    rb-diff = "nixos-rebuild build $argv --flake ${configPath} || nvd diff /run/current-system result";
+    rb-diff = "sudo nixos-rebuild boot --flake ${configPath} && nvd diff /run/booted-system /run/current-system";
     gc = "sudo nix-collect-garbage -d";
     shut = "shutdown now";
 
