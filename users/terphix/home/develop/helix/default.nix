@@ -39,6 +39,7 @@ in
         rulers = [
           80
         ];
+        auto-format = true;
       };
       keys.normal = {
         space.space = "file_picker";
@@ -52,23 +53,54 @@ in
         {
           name = "nix";
           auto-format = true;
-          formatter.command = "${pkgs.nixfmt-rfc-style}/bin/nixfmt";
-          language-servers = [ "nixd" ];
+          indent = {
+            tab-width = 2;
+            unit = "  ";
+          };
           file-types = [ "nix" ];
+          formatter.command = "${pkgs.stable.nixfmt-rfc-style}/bin/nixfmt";
+          language-servers = [ "nixd" ];
         }
         {
           name = "rust";
           auto-format = true;
-          formatter.command = "${pkgs.rust-analyzer}/bin/rust-analyzer";
+          indent = {
+            tab-width = 4;
+            unit = "    ";
+          };
+          file-types = [ "rs" ];
+          formatter.command = "${pkgs.rustfmt}/bin/rustfmt";
           language-servers = [ "rust-analyzer" ];
+        }
+        {
+          name = "python";
+          auto-format = true;
+          indent = {
+            tab-width = 4;
+            unit = "    ";
+          };
+          file-types = [ "py" ];
+          # Add isort
+          language-servers = [ "ruff-lsp" ];
+          formatter = {
+            command = "${pkgs.black}/bin/black";
+            args = [
+              "--quiet"
+              "--line-length=80"
+              "-"
+            ];
+          };
         }
       ];
       language-server = {
         nixd = {
-          command = "${pkgs.nixd}/bin/nixd";
+          command = "${pkgs.stable.nixd}/bin/nixd";
         };
         rust-analyzer = {
-          command = "${pkgs.rust-analyzer}/bin/rust-analyzer";
+          command = "${pkgs.stable.rust-analyzer}/bin/rust-analyzer";
+        };
+        ruff-lsp = {
+          command = "${pkgs.ruff-lsp}/bin/ruff-lsp";
         };
       };
     };

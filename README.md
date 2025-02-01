@@ -15,13 +15,15 @@
 
 - [ ] Configure SSH-agent.
 
-- [ ] Flash automount.
-
 ### Need to fix
 
 - [ ] Fix polkit UI.
 
+- [ ] Fuck Brave.
+
 ### Config arch
+
+- [ ] Rebuild Helix config using modularity.
 
 - [ ] Make proper import of overlays into a variable.
 

@@ -12,5 +12,6 @@ in
 
     ls = "lsd";
     ff = "fastfetch";
+    udm = "udisksctl mount -b /dev/sda";
   };
 }

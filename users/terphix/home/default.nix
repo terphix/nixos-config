@@ -27,8 +27,6 @@ in
       nvd
       lsd
       unzip
-      cowsay
-      fortune-kind
       fastfetch
     ];
   };
