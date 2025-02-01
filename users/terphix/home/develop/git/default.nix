@@ -29,6 +29,7 @@ in
       branch = {
         soft = "-committerdate";
       };
+      pull.rebase = true;
     };
   };
 }
