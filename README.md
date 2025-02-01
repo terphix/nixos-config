@@ -9,11 +9,13 @@
 
 - [x] Try NixCord.
 
-- [ ] Add Notify
+- [ ] Add Notify.
 
 - [ ] Add script for config.
 
 - [ ] Configure SSH-agent.
+
+- [ ] Add isort for Python.
 
 ### Need to fix
 
@@ -23,7 +25,7 @@
 
 ### Config arch
 
-- [ ] Rebuild Helix config using modularity.
+- [x] Rebuild Helix config using modularity.
 
 - [ ] Make proper import of overlays into a variable.
 

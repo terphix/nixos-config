@@ -1,6 +1,6 @@
 {
-  pkgs,
   inputs,
+  customLib,
   userConfig,
   ...
 }:
@@ -8,107 +8,12 @@ let
   helixPackages = inputs.helix.packages.${userConfig.system};
 in
 {
+  imports = (customLib.scanPaths ./.);
+
   programs.helix = {
     enable = true;
-    package = helixPackages.helix;
     defaultEditor = true;
-    settings = {
-      editor = {
-        scrolloff = 8;
-        mouse = false;
-        middle-click-paste = false;
-        true-color = true;
-        line-number = "relative";
-        cursorline = true;
-        idle-timeout = 200;
-        lsp = {
-          enable = true;
-          display-messages = true;
-          snippets = true;
-        };
-        cursor-shape = {
-          normal = "block";
-          insert = "bar";
-          select = "underline";
-        };
-        file-picker = {
-          hidden = false;
-          git-ignore = false;
-          git-global = true;
-        };
-        rulers = [
-          80
-        ];
-        auto-format = true;
-      };
-      keys.normal = {
-        space.space = "file_picker";
-        space.f = "global_search";
-        space.w = ":w";
-        space.q = ":q";
-      };
-    };
-    languages = {
-      language = [
-        {
-          name = "nix";
-          auto-format = true;
-          indent = {
-            tab-width = 2;
-            unit = "  ";
-          };
-          file-types = [ "nix" ];
-          formatter.command = "${pkgs.stable.nixfmt-rfc-style}/bin/nixfmt";
-          language-servers = [ "nixd" ];
-        }
-        {
-          name = "rust";
-          auto-format = true;
-          indent = {
-            tab-width = 4;
-            unit = "    ";
-          };
-          file-types = [ "rs" ];
-          formatter.command = "${pkgs.rustfmt}/bin/rustfmt";
-          language-servers = [ "rust-analyzer" ];
-        }
-        {
-          name = "python";
-          auto-format = true;
-          indent = {
-            tab-width = 4;
-            unit = "    ";
-          };
-          file-types = [ "py" ];
-          # Add isort
-          language-servers = [ "ruff-lsp" ];
-          formatter = {
-            command = "${pkgs.black}/bin/black";
-            args = [
-              "--quiet"
-              "--line-length=80"
-              "-"
-            ];
-          };
-        }
-      ];
-      language-server = {
-        nixd = {
-          command = "${pkgs.stable.nixd}/bin/nixd";
-        };
-        rust-analyzer = {
-          command = "${pkgs.stable.rust-analyzer}/bin/rust-analyzer";
-        };
-        ruff-lsp = {
-          command = "${pkgs.ruff-lsp}/bin/ruff-lsp";
-        };
-      };
-    };
-    ignores = [
-      "__pycache__/"
-      ".git/"
-      ".ruff_cache/"
-    ];
+    package = helixPackages.helix;
   };
 
   catppuccin.helix = {
