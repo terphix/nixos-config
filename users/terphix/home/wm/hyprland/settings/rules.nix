@@ -1,47 +1,63 @@
 {
   wayland.windowManager.hyprland.settings.windowrulev2 = [
+    ############
+    ### Tags ###
+    ############
+    "tag +browser, class:^(brave-browser)$"
+
+    "tag +webs, class:^(discord)$"
+    "tag +webs, class:^(FreeTube)$"
+
+    "tag +terminal, class:^(kitty)$, title:^(kitty)$"
+    "tag +terminal, class:^(kitty)$, title:^(btop)$"
+
+    "tag +file_browser, class:^(kitty)$, title:^(yazi)$"
+
+    "tag +editor, class:^(kitty)$, title:^(helix)$"
+
+    "tag +pic_in_pic, title:^(Picture in [Pp]icture)$"
+
     #############
     ### Float ###
     #############
-    "float, class:^(kitty)$, title:^(kitty)$"
-    "float, class:^(kitty)$, title:^(btop)$"
-    "float, title:^(Picture in picture)$"
+    "float, tag:terminal*"
+    "float, tag:pic_in_pic*"
 
     ################
     ### Position ###
     ################
-    "center, class:^(kitty)$, title:^(kitty)$"
-    "center, class:^(kitty)$, title:^(btop)$"
+    "center, tag:terminal*"
 
-    "move 56% 2%, title:^(Picture in picture)$"
+    "move 56% 2%, tag:pic_in_pic*"
 
     #################
     ### Workspace ###
     #################
-    "workspace 1, class:^(brave-browser)$"
-    "workspace 2, class:^(kitty)$, title:^(helix)$"
-    "workspace 3, class:^(kitty)$, title:^(yazi)$"
-    "workspace 8, class:^(FreeTube)$"
-    "workspace 9, class:^(discord)$"
-    "workspace 9, class:^(com.ayugram.desktop)$"
+    "workspace 1, tag:browser*"
+    "workspace 2, tag:editor*"
+    "workspace 3, tag:file_browser*"
+    "workspace 9, tag:webs*"
 
     "workspace 10 silent, class:^([Nn]ekoray)$"
+
+    ###############
+    ### Opacity ###
+    ###############
 
     ##############
     ### Resize ###
     ##############
-    "size 75% 75%, class:^(kitty)$, title:^(kitty)$"
-    "size 75% 75%, class:^(kitty)$, title:^(btop)$"
-    "size 688 387, title:^(Picture in picture)$"
+    "size 75% 75%, tag:terminal*"
+    "size 688 387, tag:pic-in-pic*"
 
     ###########
     ### Pin ###
     ###########
-    "pin, title:^(Picture in picture)$"
+    "pin, tag:pic_in_pic*"
 
     #############
     ### Extra ###
     #############
-    "keepaspectratio, title:^(Picture in picture)$"
+    "keepaspectratio, tag:pic_in_pic*"
   ];
 }

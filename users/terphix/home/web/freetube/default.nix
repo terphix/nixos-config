@@ -4,7 +4,7 @@
   ...
 }:
 let
-  inherit (userConfig) downloadsPath;
+  inherit (userConfig.paths) downloads;
 in
 {
   programs.freetube = {
@@ -31,7 +31,7 @@ in
       # Downloads
       downloadAskPath = false;
       downloadBehavior = "download";
-      downloadFolderPath = downloadsPath;
+      downloadFolderPath = downloads;
 
       # Hide items
       hideActiveSubscriptions = false;

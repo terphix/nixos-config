@@ -7,15 +7,11 @@
 
 ### New things
 
-- [x] Try NixCord.
-
 - [ ] Add Notify.
 
-- [ ] Add script for config.
+- [ ] Add Waybar.
 
 - [ ] Configure SSH-agent.
-
-- [ ] Add isort for Python.
 
 ### Need to fix
 
@@ -25,8 +21,6 @@
 
 ### Config arch
 
-- [x] Rebuild Helix config using modularity.
-
 - [ ] Make proper import of overlays into a variable.
 
 - [ ] Make proper import of custom lib into a variable.
@@ -34,8 +28,6 @@
 - [ ] Create beautifull README.md
 
 - [ ] Add sops decrypt support to .gitatributes.
-
-- [ ] Path file for user config.
 
 
 # That's all.

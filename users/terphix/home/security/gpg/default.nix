@@ -4,7 +4,7 @@
   ...
 }:
 let
-  homedir = userConfig.gpgPath;
+  homedir = userConfig.paths.gpg;
 in
 {
   programs.gpg = {

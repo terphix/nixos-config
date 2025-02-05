@@ -1,6 +1,6 @@
 { pkgs, userConfig, ... }:
 let
-  PASSWORD_STORE_DIR = userConfig.passwordStorePath;
+  PASSWORD_STORE_DIR = userConfig.paths.passwordStore;
 in
 {
   programs.password-store = {

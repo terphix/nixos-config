@@ -2,7 +2,7 @@
   programs.helix.settings = {
     editor = {
       # Base
-      auto-format = false;
+      auto-format = true;
       idle-timeout = 200;
 
       # Mouse

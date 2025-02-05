@@ -5,7 +5,7 @@
 }:
 let
   name = userConfig.username;
-  home = userConfig.homeDirectory;
+  home = userConfig.paths.homeDirectory;
   hashedPasswordFile = config.sops.secrets."terphix/hashedPassword".path;
 in
 {

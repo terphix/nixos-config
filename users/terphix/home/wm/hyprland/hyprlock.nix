@@ -4,7 +4,7 @@
   ...
 }:
 let
-  inherit (userConfig) wallpapersPath;
+  inherit (userConfig.paths) wallpapers;
 in
 {
   programs.hyprlock = {
@@ -20,7 +20,7 @@ in
       };
       background = [
         {
-          path = "${wallpapersPath}/Lowpoly_Street.png";
+          path = "${wallpapers}/Lowpoly_Street.png";
         }
       ];
       input-field = [

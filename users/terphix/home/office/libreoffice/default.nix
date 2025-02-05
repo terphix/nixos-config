@@ -1,6 +1,6 @@
 { pkgs, ... }:
 {
   home.packages = with pkgs; [
-    libreoffice-qt
+    stable.libreoffice-qt-fresh
   ];
 }

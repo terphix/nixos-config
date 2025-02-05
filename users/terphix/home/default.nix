@@ -6,9 +6,8 @@
   ...
 }:
 let
-  inherit (userConfig) configPath;
-  username = userConfig.username;
-  homeDirectory = userConfig.homeDirectory;
+  inherit (userConfig) username;
+  inherit (userConfig.paths) config homeDirectory;
 in
 {
   imports = (customLib.scanPaths ./.) ++ [
@@ -20,14 +19,19 @@ in
     inherit username homeDirectory;
     stateVersion = "24.11";
     sessionVariables = {
-      config = configPath;
+      inherit config;
     };
     packages = with pkgs; [
       zip
       nvd
       lsd
+      bat
+      dust
       unzip
+      sing-box
+      nix-init
       fastfetch
+      nix-prefetch-github
     ];
   };
 }
