@@ -1,2 +1,3 @@
 # Security proxy settings
-./users/terphix/nixos/services/sing-box.nix
+*sing-box.nix
+
