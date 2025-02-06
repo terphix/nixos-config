@@ -2,8 +2,9 @@
   wayland.windowManager.hyprland.settings = {
     "$mainMod" = "SUPER";
     "$TERM" = "kitty";
-
     "$MENU" = "rofi -show drun";
+    "$NOTIFICATIONS" = "mako";
+
     "$TOP" = "kitty --title btop btop";
     "$FILE_BROWSER" = "kitty --title yazi yazi";
 
@@ -14,9 +15,8 @@
 
     exec-once = [
       "hyprctl setcursor 28"
-      "systemctl --user start plasma-polkit-agent.service"
+      "$NOTIFICATIONS"
       "$BROWSER"
-      "nekoray"
       "[workspace special:magic silent] $TERM"
     ];
   };

@@ -30,6 +30,7 @@ in
         soft = "-committerdate";
       };
       pull.rebase = true;
+      diff.sopsdiffer.textconv = "sops --decrypt --config /dev/null";
     };
   };
 }

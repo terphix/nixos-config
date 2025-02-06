@@ -7,15 +7,17 @@
 
 ### New things
 
-- [ ] Add Notify.
+- [x] Add Notify.
 
-- [ ] Add Waybar.
+- [-] Add Waybar.
 
-- [ ] Configure SSH-agent.
+- [-] Configure SSH-agent.
 
-### Need to fix
+- [ ] Try ZSH.
 
-- [ ] Fix polkit UI.
+- [ ] Add service to read security files for config.
+
+### Need to fix 
 
 - [ ] Fuck Brave.
 
@@ -27,7 +29,7 @@
 
 - [ ] Create beautifull README.md
 
-- [ ] Add sops decrypt support to .gitatributes.
+- [x] Add sops decrypt support to .gitatributes.
 
 
 # That's all.

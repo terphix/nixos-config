@@ -28,10 +28,13 @@ in
       bat
       dust
       unzip
-      sing-box
       nix-init
       fastfetch
+      libnotify
       nix-prefetch-github
     ];
+    activation.rebuildFinish = ''
+      run ${pkgs.libnotify}/bin/notify-send "NixOS: Rebuild finished!" -t 5000 -i "${pkgs.papirus-icon-theme}/share/icons/Papirus-Dark/128x128/apps/nix-snowflake.svg"
+    '';
   };
 }
