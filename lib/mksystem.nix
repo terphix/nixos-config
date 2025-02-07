@@ -53,18 +53,53 @@ let
       ;
   };
 
+  #####################
+  ### Sops settings ###
+  #####################
+  sops = {
+    defaultSopsFormat = "yaml";
+    defaultSopsFile = ../secrets/secrets.yaml;
+    age.keyFile = "/home/${username}/.config/sops/age/keys.txt";
+  };
+
   ####################
   ### Special args ###
   ####################
-  specialArgs = { inherit inputs customLib userConfig; };
+  specialArgs = {
+    inherit
+      inputs
+      customLib
+      userConfig
+      ;
+  };
 in
 nixpkgs.lib.nixosSystem {
   inherit system specialArgs;
 
   modules = [
-    # System modules
-    machineConfig
+    ######################
+    ### System modules ###
+    ######################
     systemConfig
+    machineConfig
+
+    ####################
+    ### Home Manager ###
+    ####################
+    inputs.home-manager.nixosModules.home-manager
+    {
+      home-manager.useGlobalPkgs = true;
+      home-manager.useUserPackages = true;
+      home-manager.extraSpecialArgs = specialArgs;
+      home-manager.sharedModules = [
+        inputs.sops-nix.homeManagerModules.sops
+      ];
+      home-manager.users.${username} = import homeConfig;
+    }
+
+    ####################
+    ### Nix packages ###
+    ####################
     {
       nixpkgs = {
         config = packagesConfig;
@@ -75,23 +110,20 @@ nixpkgs.lib.nixosSystem {
       };
     }
 
-    # Sops for secrets
+    ################
+    ### Sops-nix ###
+    ################
+    # System settings
     inputs.sops-nix.nixosModules.sops
     {
-      sops = {
-        defaultSopsFormat = "yaml";
-        defaultSopsFile = ../secrets/secrets.yaml;
-        age.keyFile = "/home/${username}/.config/sops/age/keys.txt";
-      };
+      inherit sops;
     }
 
-    # Home Manager
-    inputs.home-manager.nixosModules.home-manager
+    # Home manager settings
     {
-      home-manager.useGlobalPkgs = true;
-      home-manager.useUserPackages = true;
-      home-manager.extraSpecialArgs = specialArgs;
-      home-manager.users.${username} = import homeConfig;
+      home-manager.users.${username} = {
+        inherit sops;
+      };
     }
   ];
 }

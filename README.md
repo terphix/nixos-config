@@ -11,13 +11,14 @@
 
 - [-] Add Waybar.
 
-- [-] Configure SSH-agent.
+- [x] Configure SSH-agent.
 
 - [ ] Try ZSH.
 
-- [ ] Add service to read security files for config.
 
 ### Need to fix 
+
+- [x] Add secrets to sing-box
 
 - [ ] Fuck Brave.
 
