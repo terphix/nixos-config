@@ -9,7 +9,7 @@
 
 - [x] Add Notify.
 
-- [-] Add Waybar.
+- [o] Add Waybar.
 
 - [x] Configure SSH-agent.
 
@@ -18,7 +18,7 @@
 
 ### Need to fix 
 
-- [x] Add secrets to sing-box
+- [x] Add secrets to sing-box.
 
 - [ ] Fuck Brave.
 
