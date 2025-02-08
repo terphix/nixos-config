@@ -4,6 +4,7 @@
     "$TERM" = "kitty";
     "$MENU" = "rofi -show drun";
     "$NOTIFICATIONS" = "mako";
+    "$BAR" = "waybar";
 
     "$TOP" = "kitty --title btop btop";
     "$FILE_BROWSER" = "kitty --title yazi yazi";
@@ -15,6 +16,7 @@
 
     exec-once = [
       "hyprctl setcursor 28"
+      "$BAR"
       "$NOTIFICATIONS"
       "$BROWSER"
       "[workspace special:magic silent] $TERM"

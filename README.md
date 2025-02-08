@@ -9,7 +9,7 @@
 
 - [x] Add Notify.
 
-- [ ] Add Waybar.
+- [x] Add Waybar.
 
 - [x] Configure SSH-agent.
 
