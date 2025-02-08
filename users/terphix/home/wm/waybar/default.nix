@@ -37,9 +37,12 @@
 
       #workspaces button:focus,
       #workspaces button:hover {
-        color: @lavender;
-        background-color: @surface0;
-        border-radius: 1rem;
+        box-shadow: none; /* Remove predefined box-shadow */
+        text-shadow: none; /* Remove predefined text-shadow */
+        background: none; /* Remove predefined background color (white) */
+        transition: none; /* Disable predefined animations */
+        border-color: transparent;
+        padding: 0.4rem;
       }
 
       #tray,
@@ -159,6 +162,7 @@
         clock = {
           timezone = "Asia/Novosibirsk";
           format = " {:%H:%M}";
+          format-alt = " {:%H:%M   %Y, %d %B, %A}";
           tooltip = false;
         };
 
