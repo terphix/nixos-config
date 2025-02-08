@@ -9,7 +9,7 @@
 
 - [x] Add Notify.
 
-- [o] Add Waybar.
+- [ ] Add Waybar.
 
 - [x] Configure SSH-agent.
 
@@ -29,6 +29,8 @@
 - [ ] Make proper import of custom lib into a variable.
 
 - [ ] Create beautifull README.md
+
+- [x] Add script for config.
 
 - [x] Add sops decrypt support to .gitatributes.
 
