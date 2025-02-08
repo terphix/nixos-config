@@ -1,4 +1,8 @@
-{ inputs, pkgs, ... }:
+{
+  pkgs,
+  inputs,
+  ...
+}:
 {
   imports = [
     inputs.nixcord.homeManagerModules.nixcord
@@ -10,7 +14,7 @@
       enable = true;
       package = pkgs.discord;
       vencord.enable = true;
-      openASAR.enable = true;
+      openASAR.enable = false;
     };
     config = {
       transparent = true;

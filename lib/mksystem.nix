@@ -59,7 +59,7 @@ let
   sops = {
     defaultSopsFormat = "yaml";
     defaultSopsFile = ../secrets/secrets.yaml;
-    age.keyFile = "/home/${username}/.config/sops/age/keys.txt";
+    age.keyFile = "/home/${username}/.sec/age/keys.txt";
   };
 
   ####################

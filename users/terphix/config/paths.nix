@@ -9,6 +9,6 @@ in
   downloads = "${homeDirectory}/downloads";
   screenshots = "${homeDirectory}/pictures/screenshots";
 
-  gpg = "${homeDirectory}/.gpg";
-  passwordStore = "${homeDirectory}/.passwords";
+  gpg = "${homeDirectory}/.sec/gpg";
+  passwordStore = "${homeDirectory}/.sec/passwords";
 }
