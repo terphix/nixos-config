@@ -25,7 +25,7 @@
       }
 
       #workspaces button {
-        color: @lavender;
+        color: @blue;
         border-radius: 1rem;
         padding: 0.4rem;
       }
@@ -75,7 +75,7 @@
       }
 
       #cpu {
-        color: @blue;
+        color: @green;
       }
 
       #memory {
@@ -149,8 +149,8 @@
           interval = 5;
           tooltip = false;
           exec = "${pkgs.playerctl}/bin/playerctl metadata --format='{{ title }}'";
-          on-click = "playerctl play-pause";
-          max-length = 50;
+          on-click = "${pkgs.playerctl}/bin/playerctl play-pause";
+          max-length = 40;
         };
 
         "custom/power" = {
@@ -162,7 +162,7 @@
         clock = {
           timezone = "Asia/Novosibirsk";
           format = " {:%H:%M}";
-          format-alt = " {:%H:%M   %Y, %d %B, %A}";
+          format-alt = " {:%Y, %d %B, %A}";
           tooltip = false;
         };
 
