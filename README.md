@@ -24,6 +24,8 @@
 
 ### Config arch
 
+- [ ] Own install script.
+
 - [ ] Make proper import of overlays into a variable.
 
 - [ ] Make proper import of custom lib into a variable.
