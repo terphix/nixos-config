@@ -173,7 +173,7 @@
           };
           bat = "BAT0";
           interval = 60;
-          full-at = 80;
+          full-at = 100;
           tooltip = false;
           format = "{icon} {capacity}%";
           format-alt = "{icon} {time}";
