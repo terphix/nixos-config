@@ -4,6 +4,7 @@
     ### Tags ###
     ############
     "tag +browser, class:^(brave-browser)$"
+    "tag +browser, class:^(firefox)$"
 
     "tag +webs, class:^(discord)$"
     "tag +webs, class:^(FreeTube)$"
