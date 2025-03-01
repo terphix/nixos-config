@@ -9,13 +9,13 @@
 
 - [ ] Try ZSH.
 
-- [ ] Configure Firefox.
+- [x] Configure Firefox.
 
 ### Need to fix 
 
 - [x] rb-diff.
 
-- [ ] Fuck Brave.
+- [x] Fuck Brave.
 
 ### Config arch
 
