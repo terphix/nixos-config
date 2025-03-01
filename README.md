@@ -7,24 +7,17 @@
 
 ### New things
 
-- [x] Add Notify.
-
-- [x] Add Waybar.
-
-- [x] Configure SSH-agent.
-
 - [ ] Try ZSH.
 
+- [ ] Configure Firefox.
 
 ### Need to fix 
 
-- [x] Add secrets to sing-box.
+- [x] rb-diff.
 
 - [ ] Fuck Brave.
 
 ### Config arch
-
-- [x] Own install script.
 
 - [ ] Make proper import of overlays into a variable.
 
@@ -32,9 +25,6 @@
 
 - [ ] Create beautifull README.md
 
-- [x] Add script for config.
-
-- [x] Add sops decrypt support to .gitatributes.
 
 
 # That's all.

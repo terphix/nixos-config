@@ -1,6 +1,5 @@
 {
   pkgs,
-  inputs,
   customLib,
   userConfig,
   ...
@@ -10,9 +9,7 @@ let
   inherit (userConfig.paths) homeDirectory;
 in
 {
-  imports = (customLib.scanPaths ./.) ++ [
-    inputs.catppuccin.homeManagerModules.catppuccin
-  ];
+  imports = (customLib.scanPaths ./.);
 
   home = {
     inherit username homeDirectory;

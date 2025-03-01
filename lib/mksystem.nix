@@ -104,6 +104,7 @@ nixpkgs.lib.nixosSystem {
       nixpkgs = {
         config = packagesConfig;
         overlays = [
+          inputs.nur.overlays.default
           overlays.stable-packages
           overlays.master-packages
         ];

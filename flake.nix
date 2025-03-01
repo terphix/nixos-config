@@ -29,6 +29,22 @@
       url = "github:nixos/nixos-hardware";
     };
 
+    ####################
+    ### NUR Packages ###
+    ####################
+    nur = {
+      url = "github:nix-community/NUR";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    ################
+    ### ArkenFox ###
+    ################
+    arkenfox = {
+      url = "github:dwarfmaster/arkenfox-nixos";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     ################
     ### Sops-Nix ###
     ################
