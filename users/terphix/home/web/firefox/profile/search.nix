@@ -1,9 +1,12 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 {
   programs.firefox.profiles.default.search = {
     force = true;
-    default = "DuckDuckGo";
-    order = [ "DuckDuckGo" ];
+    default = lib.mkForce "Brave search";
+    order = [
+      "Brave search"
+      "DuckDuckGo"
+    ];
 
     engines =
       let

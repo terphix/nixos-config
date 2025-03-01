@@ -11,6 +11,12 @@
           url = "https://github.com/terphix";
         }
         {
+          name = "LeetCode";
+          tags = [ "leetcode" ];
+          keyword = "leetcode";
+          url = "https://leetcode.com/problemset/";
+        }
+        {
           name = "DeepL";
           tags = [ "deepl" ];
           keyword = "deepl";
@@ -27,6 +33,12 @@
           tags = [ "proton" ];
           keyword = "proton";
           url = "https://mail.proton.me/u/0/inbox";
+        }
+        {
+          name = "Yahoo";
+          tags = [ "yahoo" ];
+          keyword = "yahoo";
+          url = "https://mail.yahoo.com/d/folders/1";
         }
       ];
     }

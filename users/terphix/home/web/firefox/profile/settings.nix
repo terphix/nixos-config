@@ -66,7 +66,7 @@
     "5000" = {
       enable = true;
       "5003"."signon.rememberSignons".enable = true;
-      "5010"."browser.urlbar.suggest.topsites".enable = true;
+      "5010"."browser.urlbar.suggest.topsites".enable = false;
       "5017" = {
         "extensions.formautofill.addresses.enabled".enable = true;
         "extensions.formautofill.creditCards.enabled".enable = true;
@@ -89,10 +89,12 @@
   };
 
   programs.firefox.profiles.default.settings = {
+    "browser.startup.page" = lib.mkForce 3;
     "app.update.auto" = false;
     "browser.backspace_action" = 0;
     "browser.disableResetPrompt" = true;
     "browser.download.autohideButton" = false;
+    "browser.aboutConfig.showWarning" = false;
     "browser.newtabpage.introShown" = true;
     "browser.newtabpage.pinned" = "";
     "browser.onboarding.enabled" = false;
@@ -113,9 +115,16 @@
     "browser.tabs.warnOnCloseOtherTabs" = false;
     "browser.tabs.warnOnOpen" = false;
     "browser.theme.dark-private-windows" = false;
-    "browser.toolbars.bookmarks.visibility" = "newtab";
+    "browser.toolbars.bookmarks.visibility" = "always";
     "browser.translations.enable" = false;
     "browser.uidensity" = 0;
+
+    "browser.urlbar.suggest.calculator" = true;
+    "browser.urlbar.suggest.topsites" = false;
+    "browser.urlbar.suggest.trending" = false;
+    "browser.urlbar.suggest.weather" = false;
+    "browser.urlbar.suggest.yelp" = false;
+
     "browser.urlbar.decodeURLsOnCopy" = true;
     "browser.urlbar.suggest.addons" = false;
     "browser.urlbar.suggest.bookmark" = true;
@@ -123,6 +132,7 @@
     "browser.urlbar.suggest.history" = true;
     "browser.urlbar.suggest.openpage" = true;
     "browser.warnOnQuitShortcut" = false;
+
     "devtools.everOpened" = true;
     "doh-rollout.home-region" = "US";
     "extensions.pocket.enabled" = false;
@@ -141,5 +151,14 @@
     "svg.context-properties.content.enabled" = true;
     "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
     "widget.gtk.rounded-bottom-corners.enabled" = true;
+
+    "extensions.autoDisableScopes" = 0;
+    "extensions.activeThemeID" = "{d49033ac-8969-488c-afb0-5cdb73957f41}";
+
+    "browser.uiCustomization.state" =
+      ''{"placements":{"widget-overflow-fixed-list":[],"unified-extensions-area":["_74145f27-f039-47ce-a470-a662b129930a_-browser-action"],"nav-bar":["back-button","forward-button","vertical-spacer","downloads-button","urlbar-container","save-to-pocket-button","fxa-toolbar-menu-button","ublock0_raymondhill_net-browser-action","sponsorblocker_ajay_app-browser-action","unified-extensions-button"],"toolbar-menubar":["menubar-items"],"TabsToolbar":["firefox-view-button","tabbrowser-tabs","alltabs-button"],"vertical-tabs":[],"PersonalToolbar":["personal-bookmarks"]},"seen":["_74145f27-f039-47ce-a470-a662b129930a_-browser-action","ublock0_raymondhill_net-browser-action","sponsorblocker_ajay_app-browser-action","developer-button"],"dirtyAreaCache":["unified-extensions-area","nav-bar","vertical-tabs","toolbar-menubar","TabsToolbar","PersonalToolbar"],"currentVersion":21,"newElementCount":3}'';
+    "browser.newtabpage.activity-stream.showWeather" = false;
+    "browser.newtabpage.activity-stream.feeds.topsites" = false;
+    "browser.newtabpage.activity-stream.feeds.section.topstories" = false;
   };
 }

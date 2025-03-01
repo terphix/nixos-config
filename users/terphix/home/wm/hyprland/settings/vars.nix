@@ -11,7 +11,7 @@
 
     "$CODE_EDITOR" = "kitty --title helix hx";
 
-    "$BROWSER" = "brave";
+    "$BROWSER" = "firefox";
     "$YOUTUBE_CLIENT" = "freetube";
 
     exec-once = [

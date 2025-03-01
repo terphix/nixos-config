@@ -15,7 +15,11 @@
 
 - [x] rb-diff.
 
-- [x] Fuck Brave.
+- [ ] Fix "Download dir issue" for Firefox.
+
+- [ ] Fix gnupg.
+
+- [x] Remove Brave.
 
 ### Config arch
 

@@ -14,5 +14,9 @@
     enable = true;
     package = pkgs.stable.firefox;
     arkenfox.enable = true;
+    languagePacks = [
+      "en-US"
+      "ru"
+    ];
   };
 }

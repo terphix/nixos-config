@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   programs.chromium = {
-    enable = true;
+    enable = false;
     package = pkgs.stable.brave;
 
     extensions = [
