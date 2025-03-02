@@ -2,10 +2,10 @@
 {
   programs.firefox.profiles.default.search = {
     force = true;
-    default = lib.mkForce "Brave search";
+    default = lib.mkForce "DuckDuckGo";
     order = [
-      "Brave search"
       "DuckDuckGo"
+      "Brave search"
     ];
 
     engines =

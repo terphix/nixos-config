@@ -1,7 +1,11 @@
 {
   lib,
+  userConfig,
   ...
 }:
+let
+  inherit (userConfig.paths) downloads;
+in
 {
   programs.firefox.profiles.default.arkenfox = {
     enable = true;
@@ -153,12 +157,17 @@
     "widget.gtk.rounded-bottom-corners.enabled" = true;
 
     "extensions.autoDisableScopes" = 0;
-    "extensions.activeThemeID" = "{d49033ac-8969-488c-afb0-5cdb73957f41}";
+    "extensions.activeThemeID" = lib.mkForce "{d49033ac-8969-488c-afb0-5cdb73957f41}";
 
     "browser.uiCustomization.state" =
-      ''{"placements":{"widget-overflow-fixed-list":[],"unified-extensions-area":["_74145f27-f039-47ce-a470-a662b129930a_-browser-action"],"nav-bar":["back-button","forward-button","vertical-spacer","downloads-button","urlbar-container","save-to-pocket-button","fxa-toolbar-menu-button","ublock0_raymondhill_net-browser-action","sponsorblocker_ajay_app-browser-action","unified-extensions-button"],"toolbar-menubar":["menubar-items"],"TabsToolbar":["firefox-view-button","tabbrowser-tabs","alltabs-button"],"vertical-tabs":[],"PersonalToolbar":["personal-bookmarks"]},"seen":["_74145f27-f039-47ce-a470-a662b129930a_-browser-action","ublock0_raymondhill_net-browser-action","sponsorblocker_ajay_app-browser-action","developer-button"],"dirtyAreaCache":["unified-extensions-area","nav-bar","vertical-tabs","toolbar-menubar","TabsToolbar","PersonalToolbar"],"currentVersion":21,"newElementCount":3}'';
+      ''{"placements":{"widget-overflow-fixed-list":[],"unified-extensions-area":["_74145f27-f039-47ce-a470-a662b129930a_-browser-action"],"nav-bar":["back-button","forward-button","vertical-spacer","downloads-button","urlbar-container","save-to-pocket-button","fxa-toolbar-menu-button","ublock0_raymondhill_net-browser-action","sponsorblocker_ajay_app-browser-action","unified-extensions-button"],"toolbar-menubar":["menubar-items"],"TabsToolbar":["firefox-view-button","tabbrowser-tabs"],"vertical-tabs":[],"PersonalToolbar":["personal-bookmarks"]},"seen":["_74145f27-f039-47ce-a470-a662b129930a_-browser-action","ublock0_raymondhill_net-browser-action","sponsorblocker_ajay_app-browser-action","developer-button"],"dirtyAreaCache":["unified-extensions-area","nav-bar","vertical-tabs","toolbar-menubar","TabsToolbar","PersonalToolbar"],"currentVersion":21,"newElementCount":3}'';
     "browser.newtabpage.activity-stream.showWeather" = false;
     "browser.newtabpage.activity-stream.feeds.topsites" = false;
     "browser.newtabpage.activity-stream.feeds.section.topstories" = false;
+
+    "browser.download.dir" = downloads;
+    "browser.download.folderList" = 2;
+
+    "network.proxy.no_proxies_on" = ".ru, .online";
   };
 }
