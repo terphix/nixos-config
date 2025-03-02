@@ -169,5 +169,7 @@ in
     "browser.download.folderList" = 2;
 
     "network.proxy.no_proxies_on" = ".ru, 3.shkolkovo.online";
+
+    "widget.use-xdg-desktop-portal.file-picker" = 0;
   };
 }
