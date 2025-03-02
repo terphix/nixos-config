@@ -168,6 +168,6 @@ in
     "browser.download.dir" = downloads;
     "browser.download.folderList" = 2;
 
-    "network.proxy.no_proxies_on" = ".ru, .online";
+    "network.proxy.no_proxies_on" = ".ru, 3.shkolkovo.online";
   };
 }

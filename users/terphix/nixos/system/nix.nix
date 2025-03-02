@@ -5,6 +5,9 @@
     optimise.automatic = true;
     settings = {
       warn-dirty = false;
+      sandbox = true;
+      max-jobs = "auto";
+      cores = 0;
       auto-optimise-store = true;
       experimental-features = [
         "nix-command"
