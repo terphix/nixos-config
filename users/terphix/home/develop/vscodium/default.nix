@@ -31,6 +31,7 @@
       userSettings = {
         ### Main Settings
         "files.autoSave" = "onFocusChange";
+        "workbench.startupEditor" = "none";
 
         ### View Settings
         "workbench.colorTheme" = "Catppuccin Macchiato";
