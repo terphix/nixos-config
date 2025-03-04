@@ -105,6 +105,7 @@ nixpkgs.lib.nixosSystem {
         config = packagesConfig;
         overlays = [
           inputs.nur.overlays.default
+          inputs.nix-vscode-extensions.overlays.default
           overlays.stable-packages
           overlays.master-packages
         ];

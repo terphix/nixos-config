@@ -67,6 +67,13 @@
       url = "github:helix-editor/helix";
     };
 
+    ##########################
+    ### VS Code Extensions ###
+    ##########################
+    nix-vscode-extensions = {
+      url = "github:nix-community/nix-vscode-extensions";
+    };
+
     ###############
     ### NixCord ###
     ###############

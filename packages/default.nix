@@ -6,6 +6,7 @@
       pkg:
       builtins.elem (lib.getName pkg) [
         "discord"
+        "vscode-extension-*"
       ];
     allowBroken = false;
   };
