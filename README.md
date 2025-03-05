@@ -9,17 +9,11 @@
 
 - [ ] Try ZSH.
 
-- [x] Configure Firefox.
-
 ### Need to fix 
-
-- [x] rb-diff.
 
 - [ ] Fix "Download dir issue" for Firefox.
 
 - [ ] Fix gnupg.
-
-- [x] Remove Brave.
 
 ### Config arch
 

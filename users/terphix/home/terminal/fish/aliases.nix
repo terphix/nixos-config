@@ -10,6 +10,8 @@ in
     gc = "sudo nix-collect-garbage -d";
     shut = "shutdown now";
 
+    "..." = "cd ../../";
+
     ls = "lsd";
     ff = "fastfetch";
     udm = "udisksctl mount -b /dev/sda";

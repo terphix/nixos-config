@@ -15,6 +15,7 @@
     "tag +file_browser, class:^(kitty)$, title:^(yazi)$"
 
     "tag +editor, class:^(kitty)$, title:^(helix)$"
+    "tag +editor, class:^(codium)$, title:^(VSCodium)$"
 
     "tag +pic_in_pic, title:^(Picture in [Pp]icture)$"
 

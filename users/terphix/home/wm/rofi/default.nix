@@ -8,9 +8,12 @@
     enable = true;
     package = pkgs.rofi-wayland;
     plugins = with pkgs; [
-      rofi-pass-wayland
-      rofi-emoji-wayland
+      rofi-calc
     ];
+    pass = {
+      enable = false;
+      package = pkgs.rofi-rofi-pass-wayland;
+    };
     extraConfig = {
       # Main settings
       terminal = "kitty";
@@ -23,12 +26,16 @@
       disable-history = false;
 
       # Custom
-      modi = "drun,window";
+      modi = "drun,calc,window";
       drun-display-format = "{icon} {name}";
+
+      kb-mode-next = "Alt+Right,Alt+Tab";
+      kb-mode-previous = "Alt+Left,Alt+ISO_Left_Tab";
 
       display-run = "   Run ";
       display-drun = "   Apps ";
       display-window = " 󰕰  Window";
+      display-calc = "   Calc";
       display-Network = " 󰤨  Network";
     };
   };

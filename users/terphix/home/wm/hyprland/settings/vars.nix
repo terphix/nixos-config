@@ -2,7 +2,7 @@
   wayland.windowManager.hyprland.settings = {
     "$mainMod" = "SUPER";
     "$TERM" = "kitty";
-    "$MENU" = "rofi -show drun";
+    "$MENU" = ''rofi -show drun -no-persist-history -calc-command "echo -n '{result}' | wl-copy"'';
     "$NOTIFICATIONS" = "mako";
     "$BAR" = "waybar";
 
