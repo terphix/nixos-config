@@ -1,4 +1,9 @@
-{ userConfig, ... }:
+{
+  lib,
+  pkgs,
+  userConfig,
+  ...
+}:
 let
   inherit (userConfig.paths) screenshots config;
 in
@@ -31,6 +36,11 @@ in
     };
 
     bind =
+      let
+        testScript = pkgs.writeShellScriptBin "testScript" ''
+          notify-send "Hello World!"
+        '';
+      in
       [
         ############
         ### Apps ###
@@ -39,6 +49,7 @@ in
         "$mainMod, A, exec, $MENU"
         "$mainMod, E, exec, $FILE_BROWSER"
         "$mainMod, Escape, exec, $TOP"
+        "$mainMod, Z, exec, ${lib.getExe testScript}"
 
         # Develop
         "$mainMod, RETURN, exec, $TERM"
