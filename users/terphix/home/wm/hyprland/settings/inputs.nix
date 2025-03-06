@@ -5,7 +5,7 @@
   ...
 }:
 let
-  inherit (userConfig.paths) screenshots config;
+  inherit (userConfig.paths) screenshots config wallpapers;
 in
 {
   wayland.windowManager.hyprland.settings = {
@@ -37,8 +37,13 @@ in
 
     bind =
       let
-        testScript = pkgs.writeShellScriptBin "testScript" ''
-          notify-send "Hello World!"
+        changeWallpaper = pkgs.writeShellScriptBin "changeWallpaper" ''
+          WALLPAPER_DIR="${wallpapers}/theme/"
+          CURRENT_WALL=$(hyprctl hyprpaper listloaded)
+
+          WALLPAPER=$(find "$WALLPAPER_DIR" -type f ! -name "$(basename "$CURRENT_WALL")" | shuf -n 1)
+
+          hyprctl hyprpaper reload ,"$WALLPAPER"
         '';
       in
       [
@@ -49,7 +54,7 @@ in
         "$mainMod, A, exec, $MENU"
         "$mainMod, E, exec, $FILE_BROWSER"
         "$mainMod, Escape, exec, $TOP"
-        "$mainMod, Z, exec, ${lib.getExe testScript}"
+        "$mainMod, Z, exec, ${lib.getExe changeWallpaper}"
 
         # Develop
         "$mainMod, RETURN, exec, $TERM"

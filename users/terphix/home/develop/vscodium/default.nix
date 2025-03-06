@@ -11,6 +11,7 @@
       extensions = with pkgs.vscode-marketplace; [
         ### View
         catppuccin.catppuccin-vsc
+        catppuccin.catppuccin-vsc-icons
 
         ## Nix
         bbenoist.nix
@@ -35,6 +36,7 @@
 
         ### View Settings
         "workbench.colorTheme" = "Catppuccin Macchiato";
+        "workbench.iconTheme" = "catppuccin-macchiato";
         "window.titleBarStyle" = "custom";
         "window.zoomLevel" = 1;
 

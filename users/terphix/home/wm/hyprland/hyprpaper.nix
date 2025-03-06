@@ -15,10 +15,10 @@ in
       splash = false;
       splash_offset = 2.0;
       preload = [
-        "${wallpapers}/Tokyo.png"
+        "${wallpapers}/theme/Tokyo.png"
       ];
       wallpaper = [
-        ", ${wallpapers}/Tokyo.png"
+        ", ${wallpapers}/theme/Tokyo.png"
       ];
     };
   };

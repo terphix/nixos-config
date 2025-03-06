@@ -1,10 +1,10 @@
 { username }:
 let
   homeDirectory = "/home/${username}";
+  config = "${homeDirectory}/projects/nixos-config";
 in
 {
-  inherit homeDirectory;
-  config = "${homeDirectory}/projects/nixos-config";
+  inherit homeDirectory config;
   wallpapers = "${homeDirectory}/pictures/wallpapers";
   downloads = "${homeDirectory}/downloads";
   screenshots = "${homeDirectory}/pictures/screenshots";
