@@ -53,7 +53,7 @@
         command = "${pkgs.black}/bin/black";
         args = [
           "--quiet"
-          "--line-length=80"
+          "--line-length=90"
           "-"
         ];
       };

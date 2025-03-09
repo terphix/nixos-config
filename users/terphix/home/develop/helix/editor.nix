@@ -13,13 +13,20 @@
       # UI
       true-color = true;
       line-number = "relative";
-      rulers = [ 80 ];
+      rulers = [ 90 ];
 
       cursorline = true;
       cursor-shape = {
         normal = "block";
         insert = "bar";
         select = "underline";
+      };
+
+      # Soft wrapping lines
+      soft-wrap = {
+        enable = true;
+        wrap-indicator = "";
+        wrap-at-text-width = true;
       };
 
       # LSP
