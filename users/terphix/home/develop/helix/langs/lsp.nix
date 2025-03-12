@@ -18,8 +18,13 @@
     ##############
     ### Python ###
     ##############
-    ruff-lsp = {
-      command = "${pkgs.ruff-lsp}/bin/ruff-lsp";
+    ruff = {
+      command = "${pkgs.ruff}/bin/ruff";
+      args = [ "server" ];
+      config.settings = {
+        lineLength = 89;
+        logLevel = "debug";
+      };
     };
   };
 }

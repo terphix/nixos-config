@@ -9,9 +9,11 @@
 
 - [ ] Try ZSH.
 
+- [ ] Systemd-boot.
+
 ### Need to fix 
 
-- [ ] Fix "Download dir issue" for Firefox.
+- [x] Fix "Download dir issue" for Firefox.
 
 - [ ] Fix gnupg.
 

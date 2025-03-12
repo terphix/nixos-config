@@ -59,7 +59,7 @@
           "editor.formatOnSave" = true;
           "editor.formatOnType" = false;
         };
-        "nixfmt.path" = "${pkgs.nixfmt}/bin/nixfmt";
+        "nixfmt.path" = "${pkgs.nixfmt-classic}/bin/nixfmt";
 
         ### Rust Settings
         "[rust]" = {

@@ -42,15 +42,16 @@
         "pre-commit": "pre-commit"
       },
       "locked": {
-        "lastModified": 1739094253,
-        "narHash": "sha256-yDTgmfSuL5Ax7LRuxhdoMJrBi4X9Q3fyyI7TerTXVBA=",
+        "lastModified": 1741483101,
+        "narHash": "sha256-wcyIno3iaP6LEA6scXC6YGXETxqLjuHavzXxhXAb3iQ=",
         "owner": "dwarfmaster",
         "repo": "arkenfox-nixos",
-        "rev": "27e0c3094e778bd73f93bea799f627ef317e7f22",
+        "rev": "979b28f2bb23eb5fa86cffe5078087f9708e9af9",
         "type": "github"
       },
       "original": {
         "owner": "dwarfmaster",
+        "ref": "update_action",
         "repo": "arkenfox-nixos",
         "type": "github"
       }

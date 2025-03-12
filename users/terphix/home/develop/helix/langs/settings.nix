@@ -48,7 +48,7 @@
         unit = "    ";
       };
 
-      language-servers = [ "ruff-lsp" ];
+      language-servers = [ "ruff" ];
       formatter = {
         command = "${pkgs.black}/bin/black";
         args = [

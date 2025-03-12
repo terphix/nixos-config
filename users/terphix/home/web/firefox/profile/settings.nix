@@ -54,7 +54,6 @@ in
     "2800" = {
       enable = true;
       "2811" = {
-        "privacy.clearOnShutdown.history".value = false;
         "privacy.clearOnShutdown_v2.historyFormDataAndDownloads".value = false;
       };
       "2820"."privacy.clearSiteData.historyFormDataAndDownloads".value = false;

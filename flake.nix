@@ -41,7 +41,7 @@
     ### ArkenFox ###
     ################
     arkenfox = {
-      url = "github:dwarfmaster/arkenfox-nixos";
+      url = "github:dwarfmaster/arkenfox-nixos/update_action";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
