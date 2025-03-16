@@ -8,8 +8,9 @@ let
 in
 {
   security = {
+    sudo.enable = true;
     sudo-rs = {
-      enable = true;
+      enable = false;
       package = pkgs.sudo-rs;
       execWheelOnly = false;
       extraRules = [

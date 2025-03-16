@@ -23,11 +23,12 @@ in
     initrd.verbose = false;
     loader = {
       timeout = 60;
+      efi.canTouchEfiVariables = true;
       systemd-boot = {
-        enable = false;
+        enable = true;
       };
       grub = {
-        enable = true;
+        enable = false;
         efiSupport = true;
         efiInstallAsRemovable = true;
         useOSProber = true;

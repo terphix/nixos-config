@@ -28,6 +28,7 @@ in
 
       extraGroups = [
         "networkmanager"
+        "wheel"
       ];
 
       inherit hashedPasswordFile;
