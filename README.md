@@ -5,27 +5,13 @@
 
 # Task list
 
-### New things
+- [ ] Remove all security stuff from project.
 
-- [ ] Try ZSH.
+- [ ] Update all keys.
 
-- [ ] Systemd-boot.
+- [ ] Clear project files and fix all FIXME.
 
-### Need to fix 
+- [ ] Fix install script.
 
-- [x] Fix "Download dir issue" for Firefox.
+- [ ] Reorganization of the project structure.
 
-- [ ] Fix gnupg.
-
-### Config arch
-
-- [ ] Make proper import of overlays into a variable.
-
-- [ ] Make proper import of custom lib into a variable.
-
-- [ ] Create beautifull README.md
-
-
-
-# That's all.
-- Thank you for watching!
