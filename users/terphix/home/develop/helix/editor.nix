@@ -34,6 +34,7 @@
         enable = true;
         display-messages = true;
         snippets = true;
+        display-inlay-hints = true;
       };
 
       # File Picker

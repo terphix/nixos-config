@@ -12,7 +12,7 @@ in
     input = {
       kb_layout = "us, ru";
       kb_variant = "lang";
-      kb_options = "grp:caps_toggle";
+      kb_options = "grp:win_space_toggle";
 
       repeat_rate = 50;
       repeat_delay = 230;

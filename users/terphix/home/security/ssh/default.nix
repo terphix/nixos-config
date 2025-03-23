@@ -12,6 +12,8 @@ let
 
   # SSH key for Github
   githubKey = config.sops.secrets."terphix/github/ssh_key".path;
+
+  gitlabKey = config.sops.secrets."terphix/gitlab/ssh_key".path;
 in
 {
   # Sops encrypted values for my servers
@@ -20,6 +22,9 @@ in
 
   # Sops encrypted keys for my github
   sops.secrets."terphix/github/ssh_key" = { };
+
+  # Key for Gitlab
+  sops.secrets."terphix/gitlab/ssh_key" = { };
 
   programs.ssh = {
     enable = true;
@@ -35,6 +40,11 @@ in
         user = "git";
         hostname = "github.com";
         identityFile = githubKey;
+        identitiesOnly = true;
+      };
+      "gitlab.com" = {
+        hostname = "gitlab.com";
+        identityFile = gitlabKey;
         identitiesOnly = true;
       };
     };
