@@ -33,6 +33,7 @@
         ### Main Settings
         "files.autoSave" = "onFocusChange";
         "workbench.startupEditor" = "none";
+        "explorer.confirmDelete" = false;
 
         ### View Settings
         "workbench.colorTheme" = "Catppuccin Macchiato";

@@ -1,7 +1,7 @@
 { username }:
 let
   homeDirectory = "/home/${username}";
-  config = "${homeDirectory}/projects/nixos-config";
+  config = "${homeDirectory}/projects/public/nixos-config";
 in
 {
   inherit homeDirectory config;

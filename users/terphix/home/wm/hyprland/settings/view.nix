@@ -33,7 +33,7 @@
 
     # Windows decoration
     decoration = {
-      rounding = 10;
+      rounding = 5;
 
       # Opacity settings
       active_opacity = 1.0;

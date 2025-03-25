@@ -14,6 +14,7 @@ in
   home = {
     inherit username homeDirectory;
     stateVersion = "24.11";
+    packages = with pkgs; [ monero-gui ];
 
     # Custom notify about succesful system update
     activation.rebuildFinish = ''

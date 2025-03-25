@@ -5,6 +5,12 @@
       toolbar = true;
       bookmarks = [
         {
+          name = "Git";
+          tags = [ "git" ];
+          keyword = "git";
+          url = "https://terphix.duckdns.org/main";
+        }
+        {
           name = "GitHub";
           tags = [ "github" ];
           keyword = "github";
