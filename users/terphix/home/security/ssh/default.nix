@@ -4,39 +4,32 @@
   ...
 }:
 let
-  # All secure info for guppy server
+  # Sops encrypted values for my servers
+  ## Guppy
   guppyInfo = config.sops.secrets."terphix/guppy_server/info".path;
-
-  # SSH key for guppy server
   guppyKey = config.sops.secrets."terphix/guppy_server/ssh_key".path;
 
-  # For servix
+  # Servix
   servixInfo = config.sops.secrets."terphix/servix/info".path;
   servixKey = config.sops.secrets."terphix/servix/ssh_key".path;
 
-  # SSH key for Github
+  # SSH keys for Git
   githubKey = config.sops.secrets."terphix/github/ssh_key".path;
-
   forgejoKey = config.sops.secrets."terphix/forgejo/ssh_key".path;
-
-  gitlabKey = config.sops.secrets."terphix/gitlab/ssh_key".path;
 in
 {
   # Sops encrypted values for my servers
-  sops.secrets."terphix/guppy_server/ssh_key" = { };
+  ## Guppy
   sops.secrets."terphix/guppy_server/info" = { };
+  sops.secrets."terphix/guppy_server/ssh_key" = { };
 
-  # For servix
+  ## Servix
   sops.secrets."terphix/servix/info" = { };
   sops.secrets."terphix/servix/ssh_key" = { };
 
-  # Sops encrypted keys for my github
+  # Keys for Git
   sops.secrets."terphix/github/ssh_key" = { };
-
   sops.secrets."terphix/forgejo/ssh_key" = { };
-
-  # Key for Gitlab
-  sops.secrets."terphix/gitlab/ssh_key" = { };
 
   programs.ssh = {
     enable = true;
@@ -63,11 +56,6 @@ in
         hostname = "terphix.duckdns.org";
         port = 222;
         identityFile = forgejoKey;
-        identitiesOnly = true;
-      };
-      "gitlab.com" = {
-        hostname = "gitlab.com";
-        identityFile = gitlabKey;
         identitiesOnly = true;
       };
     };

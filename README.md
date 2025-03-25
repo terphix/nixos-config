@@ -5,9 +5,9 @@
 
 # Task list
 
-- [ ] Remove all security stuff from project.
+- [x] Remove all security stuff from project.
 
-- [ ] Update all keys.
+- [x] Update all keys.
 
 - [ ] Clear project files and fix all FIXME.
 
