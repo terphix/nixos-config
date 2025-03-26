@@ -24,8 +24,12 @@ in
         return 1
       else
         mkdir ${config}/secrets && \
-        cp -r ${config}/sops-secrets/*.* ${config}/secrets/ && \
-        git --git-dir ${config}/.git add ${config}/secrets/*.*
+        cp -r ${config}/sops-secrets/*.* ${config}/secrets/
+
+        set saved_pwd $PWD
+        cd ${config}
+        
+        git add ${config}/secrets/*.*
         
         switch $argv
           case "diff"
@@ -34,8 +38,10 @@ in
             rebuild
         end
         
-        git --git-dir ${config}/.git reset ${config}/secrets/*.* && \
+        git reset ${config}/secrets/*.* && \
         rm -rf ${config}/secrets
+
+        cd $saved_pwd
       end
     '';
   };
