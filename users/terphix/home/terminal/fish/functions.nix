@@ -25,7 +25,7 @@ in
       else
         mkdir ${config}/secrets && \
         cp -r ${config}/sops-secrets/*.* ${config}/secrets/ && \
-        git add ${config}/secrets/*.*
+        git --git-dir ${config}/.git add ${config}/secrets/*.*
         
         switch $argv
           case "diff"

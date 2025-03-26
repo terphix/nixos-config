@@ -4,13 +4,9 @@
 
 
 # Task list
-## Urgent tasks:
+## Common tasks
 
-- [x] Remove all security stuff from project.
-
-- [x] Update all keys.
-
-- [ ] Fix install script.
+- [ ] Fix rb diff function
 
 ## Global tasks:
 
