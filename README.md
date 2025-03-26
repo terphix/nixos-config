@@ -10,8 +10,6 @@
 
 - [x] Update all keys.
 
-- [x] Clear project files and fix all FIXME.
-
 - [ ] Fix install script.
 
 ## Global tasks:
