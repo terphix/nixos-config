@@ -1,4 +1,4 @@
 
 [submodule "sops-secrets"]
 	path = sops-secrets
-	url = git@terphix.duckdns.org:terphix/sops-secrets.git
+	url = git@terphix.duckdns.org:terphix/sops-secrets
