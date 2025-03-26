@@ -4,14 +4,17 @@
 
 
 # Task list
+## Urgent tasks:
 
 - [x] Remove all security stuff from project.
 
 - [x] Update all keys.
 
-- [ ] Clear project files and fix all FIXME.
+- [x] Clear project files and fix all FIXME.
 
 - [ ] Fix install script.
+
+## Global tasks:
 
 - [ ] Reorganization of the project structure.
 

@@ -9,7 +9,6 @@ in
 {
   boot = {
     kernelPackages = pkgs.linuxPackages_latest;
-    # FIXME: I don't know what is it 0-0
     kernelParams = [
       "quiet"
       "splash"
