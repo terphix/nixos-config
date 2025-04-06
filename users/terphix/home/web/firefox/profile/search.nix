@@ -2,17 +2,17 @@
 {
   programs.firefox.profiles.default.search = {
     force = true;
-    default = lib.mkForce "DuckDuckGo";
+    default = lib.mkForce "ddg";
     order = [
-      "DuckDuckGo"
+      "ddg"
     ];
 
     engines = {
-      "Amazon.com".metaData.hidden = true;
-      "Bing".metaData.hidden = true;
-      "eBay".metaData.hidden = true;
-      "Google".metaData.hidden = true;
-      "Wikipedia (en)".metaData.hidden = true;
+      "amazondotcom-us".metaData.hidden = true;
+      "bing".metaData.hidden = true;
+      "ebay".metaData.hidden = true;
+      "google".metaData.hidden = true;
+      "wikipedia".metaData.hidden = true;
       "Brave search".definedAliases = [
         "brave"
         "br"

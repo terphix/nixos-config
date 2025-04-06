@@ -9,7 +9,7 @@
     add_newline = true;
     command_timeout = 500;
     continuation_prompt = "[∙](bright-black) ";
-    format = "$username$hostname$time$cmd_duration$line_break$character";
+    format = "$username$hostname$directory$time$cmd_duration$line_break$character";
     right_format = "";
     scan_timeout = 30;
 
@@ -28,7 +28,7 @@
     };
     hostname = {
       disabled = false;
-      format = "[$ssh_symbol](blue dimmed bold)[@$hostname]($style) ";
+      format = "[$ssh_symbol](blue dimmed bold)[@$hostname ▶︎ ]($style) ";
       ssh_only = false;
       style = "cyan bold";
       trim_at = ".";

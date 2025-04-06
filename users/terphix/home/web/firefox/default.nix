@@ -12,7 +12,7 @@
 
   programs.firefox = {
     enable = true;
-    package = pkgs.stable.firefox;
+    package = pkgs.firefox;
     arkenfox = {
       enable = true;
       version = "135.0";

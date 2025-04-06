@@ -1,5 +1,7 @@
 {
-  programs.firefox.profiles.default.bookmarks = [
+  programs.firefox.profiles.default.bookmarks.force = true;
+
+  programs.firefox.profiles.default.bookmarks.settings = [
     {
       name = "Bookmarks Toolbar";
       toolbar = true;
